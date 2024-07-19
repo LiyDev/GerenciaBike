@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+:root {
+    --azul-claro: #BBE1FA;
+    --azul-escuro: #2d4a7a;
+    --cor-fonte: #fff;
+    --cor-de-fundo: #0F4C75;
+    --cor-menu : #1B262C;
+}
+
+.logoteste {
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.432);
+    margin-left: 1%;
+    height: 10vh;
+}
+
+.logo__label {
+    font-size: 20px;
+    color: #fff;
+    border-left: #fff 1px solid;
+    padding-left: 25px;
+
+}
+
+.header__logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.432);
+    height: 10vh;
+}
+
+.header__logo img{
+    border-radius: 100px;   
+}
+
+
+.container__logo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.icon {
+    filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+
+
+.side-bar {
+    background: var(--cor-menu);
+    backdrop-filter:blur(15px); /* ler oq é */
+    width: 15vw;
+    height: 100vh;
+    position: fixed; /* ler sobre position */
+    top: 0;
+    left: -100%;
+    overflow-y: auto; /* ler oq é */
+    transition: 0.6s ease; /* estudar sobre transition */
+    transition-property: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.432);
+
+}
+
+.side-bar.active{
+    left: 0;
+}
+
+.side-bar .menu {
+    width: 100%;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar .menu .item a{
+    color: var(--cor-fonte);
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+    
+}
+
+.side-bar .menu .item a:hover{
+    background: #3F72AF;
+    transition: 0.3  ease;
+}
+
+.side-bar .menu .item img {
+    margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu{
+    background: rgba(255, 255,255,0.1);
+    display: none;
+}
+
+.side-bar .menu .item .sub-menu a {
+    padding-left: 80px;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.menu-btn {
+    position: absolute;
+    color: var(--cor-fonte);
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    color: var(--cor-fonte);
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    justify-content: space-between;
+    background: var(--cor-de-fundo);
+}
+
+.navbar {
+    width: 15vw;
+    height: 100vh;
+}
+
+.conteudo {
+    width: 85vw;
+    height: 100vh;
+}
+
+.bicicleta {
+    width: 100%;
+    height: 90%;
+    padding: 3% 4% 1% 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 85px;
+    overflow: auto;
+}
+
+.topbar{
+    gap: 15px;
+    padding: 1.1%;
+    justify-content: center;
+    display: flex;
+    background-color: var(--cor-menu);
+    height: 10%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.432);
+}
+
+.topbar button{ 
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+        
+}
+
+.topbar a {
+    text-decoration: none;
+    width: 16%;
+}
+
+.bicicleta1, .bicicleta2, .bicicleta3, .bicicleta4, .bicicleta5, .bicicleta6, .bicicleta7, .bicicleta8, .bicicleta9 {
+    width: 27%;
+    height: 42%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    gap: 10px;    
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+
+}
+
+
+.bicicleta__img {
+    background-image: url(../assets/img/bicicleta2.png);
+    width: 80%;
+    height: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bicicleta__dados {
+    width: 80%;
+    height: 50%;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+
+}
+
+
+
+.bicicleta__dados label{
+    font-size: 14px;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bicicleta__img a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* remove sublinhado padrão */
+    color: inherit; /* usa a cor padrão do texto */
+    display: inline-block; /* torna o link clicável */
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+    height: 55%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    border-radius: 13px;
+}
+
+.modal__conteudo {
+    background-color: #425c88;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__form-input select{
+    background-color: white;
+}
+
+.modal__form-input input{
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+
+
+.content{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 13px;
+    min-width: 30%;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+h3{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.content form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 13px;
+    height: auto;
+}
+
+.modal__form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.span-required{
+    font-size: 8px;
+    margin: 3px 0 0 1px;
+    color: var(--color-red);
+    display: none;
+}
+
+.inputs{
+    padding: 10px 6px;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(69, 69, 74);
+    border: 2px solid var(--color-dark1);
+    color: var(--color-white);
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+
+.box-select{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+    gap: 100px;
+}
+
+button[type="submit"]{
+    width: 40%;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: white;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*  PERGUNTAR SOBRE SE REPLICA O MENU EM TODAS AS PÁGINAS OU SE TEM ALGUMA OUTRA FORMA DE APARECER O MENU NOVAMENTE */
+
+/* 
+
+JOGAR O SCRIPT PARA UM SCRIPT.JS
+
+TROCAR ICONES PARA ARQUIVOS SVG;
+
+*/
+

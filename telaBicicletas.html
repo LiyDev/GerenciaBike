@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencia Bike</title>
+    <link rel="stylesheet" href="./styles/tela_bicicleta.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav> 
+                <div class="side-bar active">                    
+                    <div class="menu">
+                        <div class="header__logo">
+                            <a href="#" class="logo"><img src="./assets/img/logogerencia.jpg" width="110px" height="105px"></a>
+                            <label class="logo__label">GerenciaBike</label>
+                        </div>
+                        <div class="item">
+                            <a href="telaPrincipal.html">
+                                <img src="./assets/icon home.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Inicio
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="sub-btn">
+                                <img src="./assets/icon bicicleta.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Bicicletas<img src="./assets/icon dropdown.svg" alt="Logo Casa" width="25px" height="25px" class="icon dropdown">
+                            </a>
+                            <div class="sub-menu">
+                                <a href="./telaBicicletas.html" class="sub-item">Bicicleta 1</a>
+                                <a href="./telaBicicletas.html" class="sub-item">Bicicleta 2</a>
+                                <a href="./telaBicicletas.html" class="sub-item">Bicicleta 3</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="./telaAlertas.html"><img src="./assets/icon alerta.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Alertas</a>
+                        </div>
+                        <div class="item">
+                            <a class="sub-btn">
+                                <img src="./assets/icon relatorio.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Relatórios<img src="./assets/icon dropdown.svg" alt="Logo Casa" width="25px" height="25px" class="icon dropdown">
+                            </a>
+                            <div class="sub-menu">
+                                <a href="#" class="sub-item">Relatórios de Manutenção</a>
+                                <a href="#" class="sub-item">Relatórios de Uso</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="index.html"><img src="./assets/icon feedback.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Feedbacks</a>
+                        </div>
+                        <div class="item">
+                            <a href="index.html"><img src="./assets/icon sobre.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Sobre</a>
+                        </div>
+                        <div class="item">
+                            <a href="./telaInicial.html"><img src="./assets/icon sair.svg" alt="Logo Casa" width="25px" height="25px" class="icon">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="conteudo">
+            <div class="bicicleta">                 
+                <div class="content">                   
+                    <form id="form">
+                        <div class="modal__form-input">
+                            <label>Insira o ID:</label>
+                            <input type="text" class="inputs required">
+                        </div>
+                        <div class="modal__form-input">
+                            <label>Insira o Modelo:</label>
+                            <input type="text" class="inputs required">
+                         
+                        </div>
+                        <div class="modal__form-input">
+                            <label>Estado:</label>
+                            <select name="Select">
+                                <option>Ativo</option>
+                                <option>Manutenção</option>
+                                <option>Inativo</option>
+                                
+                            </select>
+
+                        </div>
+                       
+                        
+                        <div class="buttons">
+                        <button type="submit">Salvar</button>
+                        <button type="submit">Editar</button>
+                        <button type="submit">Cancelar</button>
+                    </div>
+                    </form>
+                </div>
+                
+                <div class="bicicleta__imagem">
+                </div>
+                <div class="bicicleta__relatorio-manutencao">
+                    <table>
+                        <tr>
+                            <th>ID Bicicleta</th>
+                            <th>Data do Alerta</th>
+                            <th>Status</th>
+                            <th>Última manutenção</th>
+                        </tr>
+                        <tr>
+                            <td>Bicicleta 1</td>
+                            <td>09/03/2024</td>
+                            <td>Resolvido</td>
+                            <td>02/03/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Bicicleta 1</td>
+                            <td>09/03/2024</td>
+                            <td>Resolvido</td>
+                            <td>02/03/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Bicicleta 1</td>
+                            <td>09/03/2024</td>
+                            <td>Resolvido</td>
+                            <td>02/03/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Bicicleta 1</td>
+                            <td>09/03/2024</td>
+                            <td>Resolvido</td>
+                            <td>02/03/2024</td>
+                        </tr>
+                       
+                    </table>
+                </div>
+                <div class="bicicleta__relatorio-uso">
+
+                </div>
+            </div>            
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+        });
+    </script>
+</body>
+</html>
